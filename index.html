@@ -2,79 +2,86 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Продаж авто</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Продаж автомобілів</title>
   <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f5f5f5;
-    }
-    header {
-      background: black;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .cars {
-      display: flex;
-      gap: 20px;
-      padding: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .car {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .car img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    button {
-      background: black;
-      color: white;
-      border: none;
-      padding: 10px;
-      margin-top: 10px;
-      cursor: pointer;
-      width: 100%;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #333; color: white; padding: 1rem; text-align: center; }
+    .container { max-width: 1000px; margin: 20px auto; padding: 0 10px; }
+    .filter { display: flex; gap: 10px; margin-bottom: 20px; }
+    .filter input, .filter button { padding: 5px; font-size: 1rem; }
+    .car-list { display: flex; flex-wrap: wrap; gap: 20px; }
+    .car-card { background: white; padding: 10px; width: 200px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); text-align: center; }
+    .car-card img { width: 100%; border-radius: 5px; }
+    .car-card h3 { margin: 10px 0 5px; }
+    .car-card p { margin: 5px 0; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Авто з Європи 🚗</h1>
-  <p>Продаж якісних автомобілів</p>
+  <h1>Продаж автомобілів</h1>
 </header>
 
-<section class="cars">
+<div class="container">
+  <form class="filter" id="filterForm">
+    <input type="text" id="brand" placeholder="Марка">
+    <input type="number" id="minYear" placeholder="Мін. рік">
+    <input type="number" id="maxPrice" placeholder="Макс. ціна">
+    <button type="submit">Фільтрувати</button>
+  </form>
 
-  <div class="car">
-    <img src="https://via.placeholder.com/300x200">
-    <h3>BMW X5</h3>
-    <p>2018 • Дизель • 25,000$</p>
-    <button onclick="alert('Зателефонуйте: +380...')">Купити</button>
-  </div>
+  <div class="car-list" id="carList"></div>
+</div>
 
-  <div class="car">
-    <img src="https://via.placeholder.com/300x200">
-    <h3>Audi A6</h3>
-    <p>2019 • Бензин • 22,000$</p>
-    <button onclick="alert('Зателефонуйте: +380...')">Купити</button>
-  </div>
+<script>
+  const cars = [
+    { id: 1, brand: "Toyota", model: "Camry", year: 2021, price: 25000, image: "https://via.placeholder.com/200x120?text=Toyota+Camry" },
+    { id: 2, brand: "BMW", model: "X5", year: 2020, price: 45000, image: "https://via.placeholder.com/200x120?text=BMW+X5" },
+    { id: 3, brand: "Mercedes", model: "C-Class", year: 2019, price: 35000, image: "https://via.placeholder.com/200x120?text=Mercedes+C-Class" },
+    { id: 4, brand: "Honda", model: "Civic", year: 2022, price: 22000, image: "https://via.placeholder.com/200x120?text=Honda+Civic" }
+  ];
 
-  <div class="car">
-    <img src="https://via.placeholder.com/300x200">
-    <h3>Mercedes E-Class</h3>
-    <p>2020 • Дизель • 30,000$</p>
-    <button onclick="alert('Зателефонуйте: +380...')">Купити</button>
-  </div>
+  const carList = document.getElementById('carList');
+  const filterForm = document.getElementById('filterForm');
 
-</section>
+  function displayCars(list) {
+    carList.innerHTML = '';
+    if(list.length === 0) {
+      carList.innerHTML = '<p>Автомобілі не знайдені</p>';
+      return;
+    }
+    list.forEach(car => {
+      const card = document.createElement('div');
+      card.className = 'car-card';
+      card.innerHTML = `
+        <img src="${car.image}" alt="${car.model}">
+        <h3>${car.brand} ${car.model}</h3>
+        <p>Рік: ${car.year}</p>
+        <p>Ціна: $${car.price.toLocaleString()}</p>
+      `;
+      carList.appendChild(card);
+    });
+  }
+
+  filterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const brand = document.getElementById('brand').value.toLowerCase();
+    const minYear = parseInt(document.getElementById('minYear').value);
+    const maxPrice = parseInt(document.getElementById('maxPrice').value);
+
+    const filtered = cars.filter(car => {
+      return (!brand || car.brand.toLowerCase().includes(brand)) &&
+             (!minYear || car.year >= minYear) &&
+             (!maxPrice || car.price <= maxPrice);
+    });
+
+    displayCars(filtered);
+  });
+
+  // Початкове відображення
+  displayCars(cars);
+</script>
 
 </body>
 </html>
