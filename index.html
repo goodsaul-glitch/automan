@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
-  <title>Мій сайт</title>
+  <meta charset="UTF-8">
+  <title>Продаж авто</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f5f5f5;
+    }
+    header {
+      background: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .cars {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .car {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .car img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    button {
+      background: black;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-  <h1>Привіт 👋</h1>
-  <p>Це мій перший сайт на GitHub!</p>
+
+<header>
+  <h1>Авто з Європи 🚗</h1>
+  <p>Продаж якісних автомобілів</p>
+</header>
+
+<section class="cars">
+
+  <div class="car">
+    <img src="https://via.placeholder.com/300x200">
+    <h3>BMW X5</h3>
+    <p>2018 • Дизель • 25,000$</p>
+    <button onclick="alert('Зателефонуйте: +380...')">Купити</button>
+  </div>
+
+  <div class="car">
+    <img src="https://via.placeholder.com/300x200">
+    <h3>Audi A6</h3>
+    <p>2019 • Бензин • 22,000$</p>
+    <button onclick="alert('Зателефонуйте: +380...')">Купити</button>
+  </div>
+
+  <div class="car">
+    <img src="https://via.placeholder.com/300x200">
+    <h3>Mercedes E-Class</h3>
+    <p>2020 • Дизель • 30,000$</p>
+    <button onclick="alert('Зателефонуйте: +380...')">Купити</button>
+  </div>
+
+</section>
+
 </body>
 </html>
