@@ -3,328 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoFix PRO — Преміум СТО Київ | Надійний ремонт авто</title>
-  <meta name="description" content="Професійне СТО в Києві. Сучасне обладнання, досвідчені майстри, гарантія до 24 місяців, чесні ціни. Запис онлайн або за телефоном.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>AutoFix PRO — Автосервіс Київ | Професійний ремонт</title>
+  <meta name="description" content="Автосервіс AutoFix PRO у Києві. Сучасне обладнання, досвідчені майстри, гарантія до 24 місяців, чесні ціни.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #0f1419;
       --card: #1a2129;
       --text: #e2e8f0;
-      --text-light: #94a3b8;
       --primary: #e63946;
-      --accent: #f4a261;
       --border: #2d3748;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family:'Montserrat', sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.7;
-    }
-    .container {
-      max-width:1400px;
-      margin:0 auto;
-      padding:0 30px;
-    }
-    /* HEADER */
+    body { font-family:'Montserrat', sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+    .container { max-width:1400px; margin:0 auto; padding:0 20px; }
     header {
-      position:fixed;
-      top:0; left:0; right:0;
-      background:rgba(15,20,25,0.96);
-      backdrop-filter:blur(16px);
-      z-index:1200;
-      border-bottom:1px solid var(--border);
-      transition:0.4s;
+      position:fixed; top:0; left:0; right:0;
+      background:rgba(15,20,25,0.95); backdrop-filter:blur(16px);
+      z-index:1200; border-bottom:1px solid var(--border);
     }
-    header.scrolled {
-      background:rgba(15,20,25,0.98);
-      padding:12px 0;
-    }
-    .header-inner {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:24px 0;
-    }
-    .logo {
-      font-size:clamp(28px,5vw,36px);
-      font-weight:900;
-      color:var(--primary);
-      letter-spacing:1px;
-    }
-    nav a {
-      margin-left:40px;
-      color:var(--text);
-      font-weight:600;
-      text-decoration:none;
-      transition:0.3s;
-    }
-    nav a:hover {
-      color:var(--primary);
-    }
-    .phone {
-      font-size:22px;
-      font-weight:700;
-      color:var(--primary);
-      text-decoration:none;
-    }
-    /* MOBILE MENU */
-    .hamburger {
-      display:none;
-      font-size:34px;
-      color:var(--primary);
-      cursor:pointer;
-    }
-    .mobile-menu {
-      position:fixed;
-      top:0; left:-100%;
-      width:100%; height:100vh;
-      background:var(--bg);
-      z-index:1300;
-      transition:0.5s;
-      padding:120px 40px;
-    }
-    .mobile-menu.active {
-      left:0;
-    }
-    .mobile-menu a {
-      display:block;
-      padding:20px 0;
-      font-size:22px;
-      color:var(--text);
-      border-bottom:1px solid var(--border);
-      text-decoration:none;
-    }
-    /* HERO */
+    .header-inner { display:flex; justify-content:space-between; align-items:center; padding:20px 0; }
+    .logo { font-size:clamp(26px,5vw,34px); font-weight:900; color:var(--primary); }
+    nav a { margin-left:32px; color:var(--text); font-weight:600; text-decoration:none; }
+    nav a:hover { color:var(--primary); }
+    .hamburger { display:none; font-size:32px; color:var(--primary); cursor:pointer; }
     .hero {
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      background:linear-gradient(rgba(15,20,25,0.85),rgba(15,20,25,0.8)),
-                  url('https://images.unsplash.com/photo-1617781213328-f1a0e6d3a3d0?auto=format&fit=crop&q=80') center/cover no-repeat;
-      background-attachment:fixed;
+      min-height:90vh; display:flex; align-items:center;
+      background:linear-gradient(rgba(15,20,25,0.8),rgba(15,20,25,0.75)),
+                 url('https://images.unsplash.com/photo-1617781213328-f1a0e6d3a3d0?auto=format&fit=crop&q=80') center/cover;
     }
-    .hero-content {
-      max-width:900px;
-      margin:0 auto;
-      text-align:center;
-      padding:0 20px;
-    }
-    .hero h1 {
-      font-size:clamp(56px,8vw,92px);
-      font-weight:900;
-      line-height:1.05;
-      margin-bottom:32px;
-    }
-    .hero p {
-      font-size:clamp(22px,3.5vw,30px);
-      max-width:720px;
-      margin:0 auto 48px;
-      color:var(--text-light);
-    }
-    .btn {
-      padding:18px 56px;
-      background:var(--primary);
-      color:#fff;
-      font-size:22px;
-      font-weight:700;
-      border-radius:12px;
-      text-decoration:none;
-      display:inline-block;
-      transition:0.4s;
-      box-shadow:0 8px 25px rgba(230,57,70,0.3);
-    }
-    .btn:hover {
-      transform:translateY(-4px);
-      box-shadow:0 14px 35px rgba(230,57,70,0.5);
-    }
-    /* SECTION */
-    .section {
-      padding:clamp(120px,18vw,200px) 0;
-    }
-    h2 {
-      text-align:center;
-      font-size:clamp(44px,7vw,68px);
-      margin-bottom:80px;
-      color:var(--primary);
-      font-weight:800;
-      position:relative;
-    }
-    h2::after {
-      content:'';
-      width:140px;
-      height:5px;
-      background:var(--primary);
-      display:block;
-      margin:24px auto;
-      border-radius:4px;
-    }
-    /* GRID & CARDS */
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
-      gap:40px;
-    }
-    .card {
-      background:var(--card);
-      padding:48px 36px;
-      border-radius:20px;
-      border:1px solid var(--border);
-      transition:0.5s;
-    }
-    .card:hover {
-      transform:translateY(-12px);
-      box-shadow:0 20px 50px rgba(0,0,0,0.5);
-    }
-    .card h3 {
-      font-size:26px;
-      margin-bottom:16px;
-      color:var(--primary);
-    }
-    .card-icon {
-      font-size:64px;
-      margin-bottom:24px;
-      color:var(--primary);
-      text-align:center;
-      display:block;
-    }
-    /* GALLERY */
-    .gallery-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-      gap:32px;
-    }
-    .gallery-grid img {
-      width:100%;
-      height:320px;
-      object-fit:cover;
-      border-radius:16px;
-      transition:transform 0.6s;
-      box-shadow:0 10px 30px rgba(0,0,0,0.4);
-    }
-    .gallery-grid img:hover {
-      transform:scale(1.04);
-    }
-    /* FLOAT BUTTONS */
-    .float-btns {
-      position:fixed;
-      bottom:40px;
-      right:40px;
-      display:flex;
-      flex-direction:column;
-      gap:20px;
-      z-index:999;
-    }
-    .float-btn {
-      width:72px;
-      height:72px;
-      border-radius:50%;
-      background:var(--primary);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:32px;
-      color:#fff;
-      box-shadow:0 12px 35px rgba(0,0,0,0.6);
-      transition:0.4s;
-    }
-    .float-btn:hover {
-      transform:scale(1.15);
-    }
-    .float-btn.whatsapp {
-      background:#25D366;
-    }
-    /* FOOTER */
-    footer {
-      background:#000;
-      padding:100px 20px 60px;
-      text-align:center;
-      color:var(--text-light);
-    }
-    /* RESPONSIVE */
+    .hero-content { max-width:900px; margin:0 auto; text-align:center; padding:0 20px; }
+    .hero h1 { font-size:clamp(48px,8vw,80px); font-weight:900; margin-bottom:24px; }
+    .hero p { font-size:clamp(20px,3.5vw,26px); margin-bottom:40px; color:#cbd5e1; }
+    .btn { padding:16px 48px; background:var(--primary); color:#fff; font-size:20px; font-weight:700; border-radius:12px; text-decoration:none; display:inline-block; transition:0.4s; }
+    .btn:hover { transform:translateY(-4px); }
+    .section { padding:clamp(100px,15vw,160px) 0; }
+    h2 { text-align:center; font-size:clamp(40px,7vw,60px); margin-bottom:60px; color:var(--primary); font-weight:800; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:32px; }
+    .card { background:var(--card); padding:40px 30px; border-radius:18px; border:1px solid var(--border); transition:0.4s; }
+    .card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,0.5); }
+    .card h3 { font-size:24px; margin-bottom:16px; color:var(--primary); }
+    .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px; }
+    .gallery-grid img { width:100%; height:280px; object-fit:cover; border-radius:16px; transition:0.5s; }
+    .gallery-grid img:hover { transform:scale(1.04); }
+    .reviews-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:32px; }
+    .review-card { background:var(--card); padding:32px; border-radius:16px; border-left:5px solid var(--primary); }
+    .stars { color:#fbbf24; font-size:22px; margin-bottom:16px; }
+    .map { border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.4); }
+    .float-btns { position:fixed; bottom:30px; right:30px; display:flex; flex-direction:column; gap:16px; z-index:999; }
+    .float-btn { width:68px; height:68px; border-radius:50%; background:var(--primary); display:flex; align-items:center; justify-content:center; font-size:30px; color:#fff; box-shadow:0 10px 30px rgba(0,0,0,0.5); transition:0.4s; }
+    .float-btn:hover { transform:scale(1.15); }
+    .float-btn.wa { background:#25D366; }
+    footer { background:#000; padding:80px 20px 40px; text-align:center; color:#94a3b8; }
     @media (max-width:992px) {
       nav { display:none; }
       .hamburger { display:block; }
-      .hero h1 { font-size:clamp(48px,10vw,72px); }
-      .grid { grid-template-columns:1fr; }
+      .grid, .gallery-grid, .reviews-grid { grid-template-columns:1fr; }
     }
     @media (max-width:480px) {
-      .btn { padding:16px 40px; font-size:20px; }
+      .btn { padding:14px 32px; font-size:18px; }
       .float-btns { bottom:20px; right:20px; }
-      .float-btn { width:64px; height:64px; font-size:28px; }
     }
   </style>
 </head>
 <body>
 
 <header id="header">
-  <div class="header-inner container">
+  <div class="container header-inner">
     <div class="logo">AutoFix PRO</div>
     <nav>
       <a href="#services">Послуги</a>
       <a href="#advantages">Переваги</a>
       <a href="#gallery">Майстерня</a>
       <a href="#reviews">Відгуки</a>
-      <a href="#contact">Записатися</a>
+      <a href="#contact">Контакти</a>
     </nav>
     <a href="tel:+380671234567" class="phone">+38 (067) 123-45-67</a>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('active')">☰</div>
   </div>
 </header>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#services" onclick="toggleMenu()">Послуги</a>
-  <a href="#advantages" onclick="toggleMenu()">Переваги</a>
-  <a href="#gallery" onclick="toggleMenu()">Майстерня</a>
-  <a href="#reviews" onclick="toggleMenu()">Відгуки</a>
-  <a href="#contact" onclick="toggleMenu()">Записатися</a>
+<div class="mobile-menu" id="mobileMenu" style="position:fixed;top:0;left:-100%;width:100%;height:100vh;background:var(--bg);z-index:1300;transition:0.5s;padding:120px 40px;">
+  <a href="#services" onclick="document.getElementById('mobileMenu').classList.remove('active')">Послуги</a>
+  <a href="#advantages" onclick="document.getElementById('mobileMenu').classList.remove('active')">Переваги</a>
+  <a href="#gallery" onclick="document.getElementById('mobileMenu').classList.remove('active')">Майстерня</a>
+  <a href="#reviews" onclick="document.getElementById('mobileMenu').classList.remove('active')">Відгуки</a>
+  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('active')">Контакти</a>
 </div>
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Преміум СТО в Києві</h1>
-    <p>Професійний ремонт вашого автомобіля з гарантією якості та чесними цінами</p>
+    <h1>Преміум автосервіс у Києві</h1>
+    <p>Сучасне обладнання • Гарантія до 24 місяців • Чесний підхід до кожного авто</p>
     <a href="tel:+380671234567" class="btn">Зателефонувати</a>
   </div>
 </section>
 
 <section class="section" id="advantages">
   <div class="container">
-    <h2>Чому обирають AutoFix PRO</h2>
+    <h2>Наші переваги</h2>
     <div class="grid">
       <div class="card">
         <div class="card-icon">🔧</div>
         <h3>Сучасне обладнання</h3>
-        <p>Комп'ютерна діагностика Bosch, 3D-розвал Hunter, оригінальне ПЗ</p>
+        <p>Оригінальні сканери Bosch, 3D-розвал Hunter, професійний інструмент</p>
       </div>
       <div class="card">
         <div class="card-icon">🛡️</div>
-        <h3>Гарантія до 24 місяців</h3>
-        <p>Письмовий договір на всі роботи та запчастини</p>
+        <h3>Гарантія 24 місяці</h3>
+        <p>Письмовий договір на роботи та запчастини</p>
       </div>
       <div class="card">
         <div class="card-icon">👨‍🔧</div>
         <h3>Досвідчені майстри</h3>
-        <p>Середній стаж команди — понад 12 років</p>
+        <p>Середній стаж — 12+ років, постійне навчання</p>
       </div>
       <div class="card">
         <div class="card-icon">💰</div>
         <h3>Чесні ціни</h3>
-        <p>Без прихованих доплат — все прозоро</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🧼</div>
-        <h3>Чиста майстерня</h3>
-        <p>Сучасні бокси, професійне прибирання після кожного авто</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🚗</div>
-        <h3>Всі марки</h3>
-        <p>Європейські, японські, корейські, американські — до 3,5 т</p>
+        <p>Без прихованих доплат, прозорий розрахунок</p>
       </div>
     </div>
   </div>
@@ -334,56 +131,61 @@
   <div class="container">
     <h2>Наша майстерня</h2>
     <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1617781213328-f1a0e6d3a3d0?auto=format&fit=crop&q=80" alt="Сучасний бокс з підйомниками" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1617781213328-f1a0e6d3a3d0?auto=format&fit=crop&q=80" alt="Сучасний чистий бокс" loading="lazy">
       <img src="https://images.unsplash.com/photo-1486261713130-07b82a6c046a?auto=format&fit=crop&q=80" alt="Майстри за роботою" loading="lazy">
       <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80" alt="Ремонт двигуна" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1618843479313-40f2e308a518?auto=format&fit=crop&q=80" alt="Чистота та організація" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1618843479313-40f2e308a518?auto=format&fit=crop&q=80" alt="Професійна організація" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&q=80" alt="Авто на підйомнику" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="section" id="contact">
+<section class="section" id="reviews">
   <div class="container">
-    <h2>Запишіться на сервіс</h2>
-    <form style="max-width:600px;margin:0 auto;background:var(--card);padding:48px;border-radius:20px;border:1px solid var(--border);">
-      <input type="text" placeholder="Ваше ім'я" required style="width:100%;padding:16px;margin:12px 0;border-radius:10px;border:none;font-size:17px;">
-      <input type="tel" placeholder="Телефон" required style="width:100%;padding:16px;margin:12px 0;border-radius:10px;border:none;font-size:17px;">
-      <input type="text" placeholder="Марка та модель авто (не обов'язково)" style="width:100%;padding:16px;margin:12px 0;border-radius:10px;border:none;font-size:17px;">
-      <button type="submit" class="btn" style="width:100%;margin-top:24px;">Відправити заявку</button>
-    </form>
+    <h2>Відгуки клієнтів</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Швидко і якісно зробили ходову. Все пояснили, нічого зайвого не нав'язували. Дуже задоволений.</p>
+        <strong>Олег П., BMW X5</strong>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Замінили ГРМ на Skoda. Чесна ціна, чисто, професійно. Рекомендую всім знайомим.</p>
+        <strong>Аліна К., Skoda Octavia</strong>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>Діагностика + ремонт АКПП. Робота на рівні офіційного сервісу, але набагато дешевше.</p>
+        <strong>Віталій С., VW Tiguan</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="map">
+  <div class="container">
+    <h2>Де ми знаходимося</h2>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5!2d30.523!3d50.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5f5f5f5f5f%3A0x5f5f5f5f5f5f5f5f!2sKyiv%2C%20Ukraine!5e0!3m2!1suk!2sua!4v1740000000000" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p style="text-align:center;margin-top:20px;font-size:18px;">Київ, вул. Прикладна, 12 (біля Окружної дороги)</p>
   </div>
 </section>
 
 <div class="float-btns">
-  <a href="tel:+380671234567" class="float-btn tel">📞</a>
+  <a href="tel:+380671234567" class="float-btn">📞</a>
   <a href="https://wa.me/380671234567" class="float-btn whatsapp">💬</a>
 </div>
 
 <footer>
   <div class="container">
-    <p>AutoFix PRO © 2026 • Київ, вул. Прикладна, 12 • +38 (067) 123-45-67</p>
-    <p style="margin-top:16px;font-size:15px;">Пн–Пт 8:00–20:00 | Сб 9:00–18:00 | Нд — за записом</p>
+    <p>AutoFix PRO © 2026 • Київ • +38 (067) 123-45-67</p>
+    <p style="margin-top:16px;">Пн–Пт 8:00–20:00 | Сб 9:00–18:00 | Нд — за записом</p>
   </div>
 </footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById('mobileMenu').classList.toggle('active')
-}
-window.addEventListener('scroll', () => {
-  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 80)
-})
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-  });
-})
-document.querySelector('form').addEventListener('submit', e => {
-  e.preventDefault();
-  alert('Заявку прийнято! Скоро передзвонимо.');
-  e.target.reset();
-})
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('scrolled',window.scrollY>80)})
 </script>
 </body>
 </html>
