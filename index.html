@@ -3,693 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoFix PRO — Преміум СТО Київ | Чесний ремонт без черг і переплат 2026</title>
-  <meta name="description" content="AutoFix PRO — найкраще СТО в Києві. Безкоштовний підвіз до 15 км, підмінний авто від 500 грн/день, діагностика безкоштовно при ремонті, гарантія до 24 місяців. Ремонт двигуна, ходової, АКПП, гальм, переобуття. Запис онлайн.">
-  <meta name="keywords" content="СТО Київ, автосервіс Київ, ремонт авто Київ, діагностика авто, заміна ГРМ, гальма ремонт, АКПП ремонт, шиномонтаж Київ, підмінний автомобіль">
-  <meta name="author" content="AutoFix PRO">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "AutoFix PRO",
-    "url": "https://yourdomain.com",
-    "telephone": "+380671234567",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "вул. Прикладна, 12",
-      "addressLocality": "Київ",
-      "addressRegion": "Київська область",
-      "postalCode": "02000",
-      "addressCountry": "UA"
-    },
-    "openingHoursSpecification": [
-      {"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "20:00"},
-      {"dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "18:00"}
-    ],
-    "priceRange": "$$",
-    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
-    "description": "Преміум СТО в Києві з чесними цінами та повним сервісом"
-  }
-  </script>
+  <title>AutoFix PRO — Преміум СТО Київ | Чесний ремонт без черг</title>
+  <meta name="description" content="AutoFix PRO — професійне СТО в Києві. Швидкий ремонт, сучасне обладнання, чесні ціни, гарантія до 24 місяців. Запис онлайн або за телефоном.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0a0e17;
-      --card: #111827;
+      --bg: #0f1419;
+      --card: #1a2129;
       --text: #e2e8f0;
-      --text-light: #94a3b8;
       --primary: #e63946;
-      --primary-dark: #b32d38;
       --accent: #f4a261;
-      --success: #22c55e;
       --border: #334155;
-      --shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family:'Montserrat', sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.65;
-      overflow-x:hidden;
-    }
-    .container { max-width:1480px; margin:0 auto; padding:0 24px; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
 
     /* HEADER */
-    header {
-      position:fixed;
-      top:0; left:0; right:0;
-      background:rgba(10,14,23,0.95);
-      backdrop-filter:blur(16px);
-      z-index:1200;
-      transition:all .4s cubic-bezier(0.4,0,0.2,1);
-      border-bottom:1px solid var(--border);
-    }
-    header.scrolled {
-      padding:10px 0;
-      background:rgba(10,14,23,0.98);
-      box-shadow:0 8px 25px rgba(0,0,0,0.6);
-    }
-    .header-inner {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 0;
-    }
-    .logo {
-      font-size:clamp(28px,5.5vw,38px);
-      font-weight:900;
-      color:var(--primary);
-      letter-spacing:1.5px;
-      text-transform:uppercase;
-    }
-    nav {
-      display:flex;
-      gap:32px;
-    }
-    nav a {
-      font-weight:600;
-      color:var(--text);
-      text-decoration:none;
-      transition:all .3s;
-      position:relative;
-    }
-    nav a:hover {
-      color:var(--primary);
-    }
-    nav a::after {
-      content:'';
-      position:absolute;
-      bottom:-4px;
-      left:0;
-      width:0;
-      height:2px;
-      background:var(--primary);
-      transition:all .3s;
-    }
-    nav a:hover::after { width:100%; }
-    .header-right {
-      display:flex;
-      align-items:center;
-      gap:28px;
-    }
-    .phone-header {
-      font-size:22px;
-      font-weight:700;
-      color:var(--primary);
-      text-decoration:none;
-      transition:.3s;
-    }
-    .phone-header:hover { transform:scale(1.05); }
+    header{position:fixed;top:0;left:0;right:0;background:rgba(15,20,25,0.95);backdrop-filter:blur(16px);z-index:1200;border-bottom:1px solid var(--border)}
+    .header-inner{max-width:1480px;margin:0 auto;padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:clamp(26px,6vw,36px);font-weight:900;color:var(--primary)}
+    nav{display:flex;gap:32px}
+    .nav-link{color:var(--text);font-weight:600;text-decoration:none;transition:.3s}
+    .nav-link:hover{color:var(--primary)}
+    .phone{font-size:22px;font-weight:700;color:var(--primary)}
+    .hamburger{display:none;font-size:34px;color:var(--primary);cursor:pointer}
+
+    /* MOBILE MENU */
+    .mobile-menu{position:fixed;top:0;left:-100%;width:100%;height:100vh;background:var(--bg);z-index:1300;transition:.5s;padding:120px 30px}
+    .mobile-menu.active{left:0}
+    .mobile-menu a{display:block;padding:20px 0;font-size:22px;color:var(--text);border-bottom:1px solid var(--border)}
 
     /* HERO */
-    .hero {
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      background:linear-gradient(rgba(10,14,23,0.82),rgba(10,14,23,0.75)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat fixed;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero::before {
-      content:'';
-      position:absolute;
-      inset:0;
-      background:linear-gradient(45deg,rgba(230,57,70,0.12),transparent);
-      z-index:1;
-    }
-    .hero-content {
-      position:relative;
-      z-index:2;
-      max-width:1100px;
-      margin:0 auto;
-      text-align:center;
-      padding:0 20px;
-    }
-    .hero-badge {
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      background:rgba(230,57,70,0.15);
-      padding:8px 24px;
-      border-radius:50px;
-      font-size:15px;
-      font-weight:600;
-      margin-bottom:20px;
-      border:1px solid var(--primary);
-    }
-    .hero h1 {
-      font-size:clamp(52px,9vw,88px);
-      font-weight:900;
-      line-height:1.05;
-      margin-bottom:24px;
-      text-shadow:0 10px 30px rgba(0,0,0,0.7);
-    }
-    .hero .subtitle {
-      font-size:clamp(22px,4vw,32px);
-      max-width:820px;
-      margin:0 auto 48px;
-      opacity:0.95;
-    }
-    .hero-buttons {
-      display:flex;
-      gap:24px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    .btn {
-      padding:18px 52px;
-      font-size:21px;
-      font-weight:700;
-      border-radius:14px;
-      transition:all .4s cubic-bezier(0.4,0,0.2,1);
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-    }
-    .btn-primary {
-      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-      color:#fff;
-      box-shadow:0 12px 35px rgba(230,57,70,0.45);
-    }
-    .btn-primary:hover {
-      transform:translateY(-6px) scale(1.03);
-      box-shadow:0 20px 45px rgba(230,57,70,0.6);
-    }
-    .btn-secondary {
-      background:transparent;
-      border:3px solid var(--primary);
-      color:var(--primary);
-    }
-    .btn-secondary:hover {
-      background:var(--primary);
-      color:#fff;
-    }
-
-    /* COUNTERS */
-    .counters {
-      display:flex;
-      justify-content:center;
-      gap:60px;
-      flex-wrap:wrap;
-      margin-top:80px;
-      background:rgba(0,0,0,0.4);
-      padding:32px 40px;
-      border-radius:20px;
-    }
-    .counter-item {
-      text-align:center;
-    }
-    .counter-number {
-      font-size:48px;
-      font-weight:800;
-      color:var(--accent);
-    }
-    .counter-label {
-      font-size:18px;
-      color:var(--text-light);
-      margin-top:8px;
-    }
+    .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(rgba(15,20,25,0.82),rgba(15,20,25,0.75)),url('https://images.unsplash.com/photo-1617781213328-f1a0e6d3a3d0?auto=format&fit=crop&q=80') center/cover no-repeat;background-attachment:fixed}
+    .hero-content{max-width:1000px;margin:0 auto;text-align:center;padding:0 20px}
+    .hero h1{font-size:clamp(52px,9vw,84px);font-weight:900;line-height:1.05;margin-bottom:24px}
+    .hero p{font-size:clamp(21px,4vw,29px);max-width:780px;margin:0 auto 50px}
+    .btn{padding:18px 48px;font-size:21px;font-weight:700;border-radius:12px;transition:.4s}
+    .btn-primary{background:linear-gradient(135deg,#e63946,#d00000);color:#fff}
+    .btn-primary:hover{transform:translateY(-5px)}
+    .btn-outline{border:3px solid var(--primary);color:var(--primary);background:transparent}
 
     /* SECTIONS */
-    .section {
-      padding:clamp(100px,16vw,180px) 0;
-    }
-    h2 {
-      font-size:clamp(42px,7.5vw,64px);
-      text-align:center;
-      margin-bottom:80px;
-      color:var(--primary);
-      position:relative;
-      font-weight:800;
-    }
-    h2::after {
-      content:'';
-      position:absolute;
-      bottom:-16px;
-      left:50%;
-      transform:translateX(-50%);
-      width:140px;
-      height:6px;
-      background:linear-gradient(to right,var(--primary),var(--accent));
-      border-radius:4px;
-    }
+    .section{padding:clamp(100px,15vw,180px) 20px}
+    h2{font-size:clamp(40px,7.5vw,60px);text-align:center;margin-bottom:70px;color:var(--primary);font-weight:800}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px}
 
-    /* SERVICES GRID */
-    .services-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-      gap:32px;
-    }
-    .service-card {
-      background:var(--card);
-      border-radius:20px;
-      overflow:hidden;
-      border:1px solid var(--border);
-      transition:all .5s cubic-bezier(0.4,0,0.2,1);
-    }
-    .service-card:hover {
-      transform:translateY(-20px);
-      box-shadow:var(--shadow);
-      border-color:var(--primary);
-    }
-    .service-icon {
-      font-size:64px;
-      text-align:center;
-      padding:32px 0 16px;
-      background:linear-gradient(135deg,rgba(230,57,70,0.1),transparent);
-    }
-    .service-body {
-      padding:28px;
-    }
-    .service-body h3 {
-      font-size:24px;
-      margin-bottom:12px;
-      color:var(--primary);
-    }
-
-    /* PRICES TABLE */
-    .price-table {
-      width:100%;
-      border-collapse:collapse;
-      background:var(--card);
-      border-radius:16px;
-      overflow:hidden;
-      box-shadow:0 15px 40px rgba(0,0,0,0.3);
-    }
-    .price-table th {
-      background:var(--primary);
-      color:#fff;
-      padding:20px;
-      text-align:left;
-      font-weight:600;
-    }
-    .price-table td {
-      padding:22px 20px;
-      border-bottom:1px solid var(--border);
-    }
-    .price-table tr:last-child td {
-      border:none;
-    }
-    .price-table .price {
-      font-size:22px;
-      font-weight:700;
-      color:var(--accent);
-    }
-
-    /* GALLERY */
-    .gallery {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:24px;
-    }
-    .gallery-item {
-      position:relative;
-      overflow:hidden;
-      border-radius:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.4);
-    }
-    .gallery-item img {
-      width:100%;
-      height:320px;
-      object-fit:cover;
-      transition:transform 1.2s cubic-bezier(0.4,0,0.2,1);
-    }
-    .gallery-item:hover img {
-      transform:scale(1.18);
-    }
-    .gallery-label {
-      position:absolute;
-      bottom:0;
-      left:0;
-      right:0;
-      background:linear-gradient(transparent,rgba(0,0,0,0.85));
-      padding:24px 20px;
-      color:#fff;
-      font-weight:600;
-    }
-
-    /* TEAM */
-    .team-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:32px;
-    }
-    .team-member {
-      text-align:center;
-      background:var(--card);
-      padding:32px 20px;
-      border-radius:18px;
-      border:1px solid var(--border);
-    }
-    .team-member img {
-      width:160px;
-      height:160px;
-      object-fit:cover;
-      border-radius:50%;
-      border:5px solid var(--primary);
-      margin-bottom:20px;
-    }
+    /* CARDS */
+    .card{background:var(--card);padding:40px 30px;border-radius:20px;border:1px solid var(--border);transition:.5s}
+    .card:hover{transform:translateY(-15px);box-shadow:0 25px 50px rgba(0,0,0,0.5)}
 
     /* REVIEWS */
-    .reviews-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
-      gap:32px;
-    }
-    .review-card {
-      background:var(--card);
-      padding:36px 32px;
-      border-radius:18px;
-      border-left:7px solid var(--primary);
-      position:relative;
-    }
-    .review-card::before {
-      content:'“';
-      font-size:120px;
-      opacity:0.08;
-      color:var(--primary);
-      position:absolute;
-      top:-30px;
-      left:20px;
-    }
-    .review-stars {
-      color:#fbbf24;
-      font-size:26px;
-      margin-bottom:16px;
-    }
+    .review-card{background:var(--card);padding:32px;border-radius:18px;border-left:6px solid var(--primary)}
 
-    /* FAQ */
-    .faq-container {
-      max-width:920px;
-      margin:0 auto;
-    }
-    .faq-item {
-      margin-bottom:16px;
-      background:var(--card);
-      border-radius:14px;
-      overflow:hidden;
-      border:1px solid var(--border);
-    }
-    .faq-question {
-      padding:24px 32px;
-      font-size:19px;
-      font-weight:600;
-      cursor:pointer;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      transition:background .3s;
-    }
-    .faq-question:hover {
-      background:rgba(230,57,70,0.1);
-    }
-    .faq-answer {
-      display:none;
-      padding:0 32px 32px;
-      color:var(--text-light);
-      line-height:1.75;
-    }
-    .faq-item.active .faq-answer {
-      display:block;
-    }
-    .faq-item.active .faq-question {
-      background:rgba(230,57,70,0.12);
-    }
-
-    /* CTA */
-    .cta-final {
-      background:linear-gradient(135deg,#e63946,#d00000);
-      color:#fff;
-      text-align:center;
-      padding:clamp(110px,18vw,200px) 40px;
-    }
-
-    /* FLOAT BUTTONS */
-    .float-container {
-      position:fixed;
-      bottom:32px;
-      right:32px;
-      z-index:9999;
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-    }
-    .float-btn {
-      width:74px;
-      height:74px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:32px;
-      color:#fff;
-      box-shadow:0 12px 35px rgba(0,0,0,0.6);
-      transition:all .4s cubic-bezier(0.68,-0.55,0.27,1.55);
-    }
-    .float-btn:hover {
-      transform:scale(1.25) rotate(8deg);
-    }
-    .float-btn.tel { background:var(--primary); }
-    .float-btn.wa { background:#25d366; }
-    .float-btn.tg { background:#229ed9; }
+    /* FLOAT */
+    .float-btns{position:fixed;bottom:30px;right:30px;display:flex;flex-direction:column;gap:16px;z-index:999}
+    .float-btn{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;color:#fff;box-shadow:0 12px 35px rgba(0,0,0,0.6);transition:.4s}
+    .float-btn:hover{transform:scale(1.2)}
+    .float-btn.tel{background:var(--primary)}
+    .float-btn.wa{background:#25D366}
 
     /* FOOTER */
-    footer {
-      background:#05070f;
-      padding:100px 20px 60px;
-      text-align:center;
-      color:var(--text-light);
-    }
-    .footer-links {
-      margin:40px 0;
-      display:flex;
-      justify-content:center;
-      gap:40px;
-      flex-wrap:wrap;
-    }
+    footer{background:#05070f;padding:90px 20px 50px;text-align:center;color:#94a3b8}
 
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity:0; transform:translateY(60px); }
-      to { opacity:1; transform:translateY(0); }
+    /* MOBILE */
+    @media (max-width:992px){
+      nav{display:none}
+      .hamburger{display:block}
+      .hero-buttons{flex-direction:column;align-items:center;gap:20px}
+      .grid{grid-template-columns:1fr}
     }
-    .animate {
-      animation:fadeUp 1s forwards;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width:992px) {
-      nav { display:none; }
-      .hero-buttons { flex-direction:column; align-items:center; }
-    }
-    @media (max-width:576px) {
-      .btn { padding:16px 36px; font-size:18px; }
+    @media (max-width:480px){
+      .btn{padding:16px 36px;font-size:18px}
     }
   </style>
 </head>
 <body>
 
 <header id="header">
-  <div class="container header-inner">
+  <div class="header-inner">
     <div class="logo">AutoFix PRO</div>
     <nav>
-      <a href="#services">Послуги</a>
-      <a href="#prices">Ціни</a>
-      <a href="#gallery">Галерея</a>
-      <a href="#team">Команда</a>
-      <a href="#reviews">Відгуки</a>
-      <a href="#faq">FAQ</a>
+      <a href="#services" class="nav-link">Послуги</a>
+      <a href="#advantages" class="nav-link">Переваги</a>
+      <a href="#reviews" class="nav-link">Відгуки</a>
+      <a href="#faq" class="nav-link">Питання</a>
     </nav>
-    <div class="header-right">
-      <a href="tel:+380671234567" class="phone-header">+38 (067) 123-45-67</a>
-      <a href="#contact" class="btn btn-secondary" style="padding:12px 28px;font-size:17px;">Записатися</a>
-    </div>
+    <a href="tel:+380671234567" class="phone">+38 (067) 123-45-67</a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="hero-badge">
-      <span>⭐️ Преміум сервіс у Києві</span>
-    </div>
-    <h1>Ремонт авто за 1 день<br>з чесними цінами</h1>
-    <p class="subtitle">Безкоштовний підвіз • Підмінний автомобіль • Гарантія до 24 місяців • Діагностика безкоштовно при ремонті</p>
-    
-    <div class="hero-buttons">
-      <a href="tel:+380671234567" class="btn btn-primary">Зателефонувати зараз</a>
-      <a href="#contact" class="btn btn-secondary">Записатися онлайн</a>
-    </div>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="toggleMenu()">Послуги</a>
+  <a href="#advantages" onclick="toggleMenu()">Переваги</a>
+  <a href="#reviews" onclick="toggleMenu()">Відгуки</a>
+  <a href="#faq" onclick="toggleMenu()">Питання</a>
+  <a href="#contact" onclick="toggleMenu()">Записатися</a>
+</div>
 
-    <div class="counters">
-      <div class="counter-item">
-        <div class="counter-number" data-target="3200">0</div>
-        <div class="counter-label">Авто відремонтовано</div>
-      </div>
-      <div class="counter-item">
-        <div class="counter-number" data-target="8">0</div>
-        <div class="counter-label">Років досвіду</div>
-      </div>
-      <div class="counter-item">
-        <div class="counter-number" data-target="24">0</div>
-        <div class="counter-label">Місяців гарантії</div>
-      </div>
-      <div class="counter-item">
-        <div class="counter-number" data-target="98">0</div>
-        <div class="counter-label">% задоволених клієнтів</div>
-      </div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Преміум СТО в Києві</h1>
+    <p>Чесний ремонт • Сучасне обладнання • Швидко • З гарантією</p>
+    <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap">
+      <a href="tel:+380671234567" class="btn btn-primary">Зателефонувати</a>
+      <a href="#contact" class="btn btn-outline">Записатися</a>
     </div>
   </div>
 </section>
 
 <section class="section" id="advantages">
   <div class="container">
-    <h2>Чому тисячі киян обирають AutoFix PRO</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🚀</div>
-        <div class="service-body">
-          <h3>Швидкість</h3>
-          <p>Більшість робіт — за 1 робочий день. Без черг.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🛡️</div>
-        <div class="service-body">
-          <h3>Гарантія 24 місяці</h3>
-          <p>Письмовий договір на всі роботи та запчастини.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🚗</div>
-        <div class="service-body">
-          <h3>Підмінний авто</h3>
-          <p>Від 500 грн/день — ви їздите, поки ремонтуємо.</p>
-        </div>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📍</div>
-        <div class="service-body">
-          <h3>Безкоштовний підвіз</h3>
-          <p>До 15 км по Києву при ремонті від 3000 грн.</p>
-        </div>
-      </div>
+    <h2>Чому обирають AutoFix PRO</h2>
+    <div class="grid">
+      <div class="card"><h3>Сучасне обладнання</h3><p>Комп'ютерна діагностика Bosch, 3D-розвал, оригінальне ПЗ</p></div>
+      <div class="card"><h3>Досвідчені майстри</h3><p>Кожен спеціаліст має понад 10 років практики</p></div>
+      <div class="card"><h3>Чесні ціни</h3><p>Без прихованих доплат — все прозоро</p></div>
+      <div class="card"><h3>Швидкий ремонт</h3><p>Більшість робіт виконуємо за 1 робочий день</p></div>
+      <div class="card"><h3>Гарантія до 24 місяців</h3><p>Письмовий договір на роботи та запчастини</p></div>
+      <div class="card"><h3>Чиста майстерня</h3><p>Сучасні бокси, професійна чистота після кожного авто</p></div>
     </div>
   </div>
 </section>
 
 <section class="section" id="services">
   <div class="container">
-    <h2>Що ми ремонтуємо професійно</h2>
-    <div class="services-grid">
-      <div class="service-card"> <div class="service-icon">🔍</div> <div class="service-body"><h3>Комп'ютерна діагностика</h3><p>Всі марки • Оригінальне обладнання • 30–60 хв</p></div> </div>
-      <div class="service-card"> <div class="service-icon">🔧</div> <div class="service-body"><h3>Ремонт двигуна та ГРМ</h3><p>Заміна ременя, ланцюга, ГБЦ, прокладок</p></div> </div>
-      <div class="service-card"> <div class="service-icon">🛠️</div> <div class="service-body"><h3>Ходова частина</h3><p>3D розвал-сходження • Амортизатори • Сайлентблоки</p></div> </div>
-      <div class="service-card"> <div class="service-icon">🛑</div> <div class="service-body"><h3>Гальмівна система</h3><p>Диски • Колодки • Супорти • Прокачка</p></div> </div>
-      <div class="service-card"> <div class="service-icon">🚘</div> <div class="service-body"><h3>АКПП / DSG / МКПП</h3><p>Ремонт • Адаптація • Заміна оливи</p></div> </div>
-      <div class="service-card"> <div class="service-icon">❄️</div> <div class="service-body"><h3>Кондиціонер</h3><p>Заправка • Ремонт компресора • Діагностика</p></div> </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="prices">
-  <div class="container">
-    <h2>Прозорі ціни 2026 року</h2>
-    <table class="price-table">
-      <thead>
-        <tr><th>Послуга</th><th>Ціна від</th><th>Примітка</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Комп'ютерна діагностика</td><td class="price">450 грн</td><td>Безкоштовно при ремонті</td></tr>
-        <tr><td>Розвал-сходження 3D</td><td class="price">750 грн</td><td>Для всіх марок</td></tr>
-        <tr><td>Заміна гальмівних колодок (вісь)</td><td class="price">950 грн</td><td>+ запчастини</td></tr>
-        <tr><td>Заміна ГРМ (повний комплект)</td><td class="price">4900 грн</td><td>16 клапанів</td></tr>
-        <tr><td>Ремонт ходової (1 сторона)</td><td class="price">1400 грн</td><td>Сайлентблоки + важелі</td></tr>
-        <tr><td>АКПП — заміна оливи + фільтр</td><td class="price">2800 грн</td><td>Адаптація включена</td></tr>
-        <tr><td>Заправка кондиціонера</td><td class="price">850 грн</td><td>Фреон R134a</td></tr>
-      </tbody>
-    </table>
-    <p style="text-align:center;margin-top:40px;font-size:19px;color:var(--accent);">Точну суму називаємо після діагностики — без сюрпризів!</p>
-  </div>
-</section>
-
-<section class="section" id="gallery">
-  <div class="container">
-    <h2>Наша майстерня та роботи до/після</h2>
-    <div class="gallery">
-      <div class="gallery-item"><img src="https://picsum.photos/id/1015/800/600" alt="До ремонту"><div class="gallery-label">До ремонту — BMW X5</div></div>
-      <div class="gallery-item"><img src="https://picsum.photos/id/201/800/600" alt="Після"><div class="gallery-label">Після — чисто та швидко</div></div>
-      <div class="gallery-item"><img src="https://picsum.photos/id/301/800/600" alt="Двигун"><div class="gallery-label">Капітальний ремонт двигуна</div></div>
-      <div class="gallery-item"><img src="https://picsum.photos/id/401/800/600" alt="Гальма"><div class="gallery-label">Нові гальмівні диски</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="team">
-  <div class="container">
-    <h2>Наша команда професіоналів</h2>
-    <div class="team-grid">
-      <div class="team-member">
-        <img src="https://picsum.photos/id/64/300/300" alt="Іван">
-        <h3>Іван Петренко</h3>
-        <p>Головний механік<br>16 років досвіду</p>
-      </div>
-      <div class="team-member">
-        <img src="https://picsum.photos/id/65/300/300" alt="Олег">
-        <h3>Олег Кравець</h3>
-        <p>Спеціаліст АКПП</p>
-      </div>
-      <div class="team-member">
-        <img src="https://picsum.photos/id/66/300/300" alt="Сергій">
-        <h3>Сергій Бондар</h3>
-        <p>Електрик-діагност</p>
-      </div>
+    <h2>Наші послуги</h2>
+    <div class="grid">
+      <div class="card"><h3>Комп'ютерна діагностика</h3><p>Всі марки • 30–60 хвилин</p></div>
+      <div class="card"><h3>Ремонт двигуна та ГРМ</h3><p>Заміна ременя, ланцюга, ГБЦ</p></div>
+      <div class="card"><h3>Ходова частина + сходження</h3><p>3D-розвал, амортизатори, сайлентблоки</p></div>
+      <div class="card"><h3>Гальмівна система</h3><p>Диски, колодки, супорти</p></div>
+      <div class="card"><h3>АКПП / DSG</h3><p>Ремонт та обслуговування</p></div>
+      <div class="card"><h3>Сервіс кондиціонера</h3><p>Заправка та ремонт</p></div>
     </div>
   </div>
 </section>
 
 <section class="section" id="reviews">
   <div class="container">
-    <h2>Реальні відгуки клієнтів</h2>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>«Підвезли безкоштовно, зробили ГРМ за день. Ціна реальна, майстри професіонали!»</p>
-        <strong>Олег П., BMW X5 — 18 березня 2026</strong>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>«АКПП після ремонту працює ідеально. Підмінний авто врятував мене на тиждень.»</p>
-        <strong>Марія К., Skoda Octavia — 12 березня 2026</strong>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>«Найкраще СТО в Києві. Чесні ціни, швидкість і гарантія.»</p>
-        <strong>Віталій С., Toyota RAV4 — 5 березня 2026</strong>
-      </div>
+    <h2>Відгуки клієнтів</h2>
+    <div class="grid">
+      <div class="review-card"><p>«Швидко і якісно зробили ГРМ. Чесні ціни, без зайвого.»</p><strong>Олег П., BMW</strong></div>
+      <div class="review-card"><p>«Найкраще СТО в Києві. Рекомендую!»</p><strong>Аліна К., Skoda</strong></div>
+      <div class="review-card"><p>«Професійно, чисто, швидко.»</p><strong>Віталій С., Toyota</strong></div>
     </div>
   </div>
 </section>
@@ -697,113 +155,49 @@
 <section class="section" id="faq">
   <div class="container">
     <h2>Часті питання</h2>
-    <div class="faq-container">
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-question">Скільки коштує діагностика? <span style="font-size:28px;">↓</span></div>
-        <div class="faq-answer">450–750 грн. Повністю безкоштовно, якщо ви залишаєте авто на ремонт.</div>
-      </div>
-      <div class="faq-item" onclick="toggleFaq(this)">
-        <div class="faq-question">Чи є підмінний автомобіль? <span style="font-size:28px;">↓</span></div>
-        <div class="faq-answer">Так, від 500 грн за добу. Доступно 6 автомобілів різних класів.</div>
-      </div>
-      <!-- Додаткові 12 питань для обсягу -->
-      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Які марки обслуговуєте? <span style="font-size:28px;">↓</span></div><div class="faq-answer">Всі популярні європейські, японські, корейські та американські авто.</div></div>
-      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-question">Працюєте у вихідні? <span style="font-size:28px;">↓</span></div><div class="faq-answer">Так, субота 9:00–18:00. Неділя — тільки за попереднім записом.</div></div>
-      <!-- ... (ще 10+ для рядків) ... -->
+    <!-- FAQ items тут (можеш додати більше) -->
+    <div class="faq-item" onclick="this.classList.toggle('active')">
+      <div class="faq-question">Скільки коштує діагностика? <span>▼</span></div>
+      <div class="faq-answer">450–750 грн. Безкоштовно при ремонті від 4000 грн.</div>
     </div>
   </div>
 </section>
 
-<section class="cta-final" id="contact">
+<section class="section" id="contact">
   <div class="container">
-    <h2 style="color:#fff;">Готові відремонтувати ваше авто сьогодні?</h2>
-    <p style="font-size:26px;max-width:700px;margin:0 auto 60px;">Залиште заявку — ми передзвонимо протягом 5 хвилин і забронюємо зручний час</p>
-    <form id="mainForm" style="max-width:620px;margin:0 auto;background:rgba(255,255,255,0.12);padding:52px 40px;border-radius:24px;">
-      <input type="text" placeholder="Ім'я" required style="width:100%;padding:18px;margin:12px 0;border-radius:12px;border:none;font-size:18px;">
-      <input type="tel" placeholder="Телефон" required style="width:100%;padding:18px;margin:12px 0;border-radius:12px;border:none;font-size:18px;">
-      <input type="text" placeholder="Марка і модель авто" style="width:100%;padding:18px;margin:12px 0;border-radius:12px;border:none;font-size:18px;">
-      <button type="submit" class="btn btn-primary" style="width:100%;margin-top:24px;padding:20px;font-size:22px;">Відправити заявку</button>
+    <h2>Запишіться на сервіс</h2>
+    <form id="form" style="max-width:620px;margin:0 auto;background:var(--card);padding:50px;border-radius:20px">
+      <input type="text" placeholder="Ім'я" required style="width:100%;padding:16px;margin:12px 0;border-radius:10px;border:none">
+      <input type="tel" placeholder="Телефон" required style="width:100%;padding:16px;margin:12px 0;border-radius:10px;border:none">
+      <button type="submit" class="btn btn-primary" style="width:100%;margin-top:20px">Відправити заявку</button>
     </form>
   </div>
 </section>
 
-<div class="float-container">
+<div class="float-btns">
   <a href="tel:+380671234567" class="float-btn tel">📞</a>
   <a href="https://wa.me/380671234567" class="float-btn wa">💬</a>
-  <a href="https://t.me/AutoFixPRO_bot" class="float-btn tg">✈️</a>
 </div>
 
 <footer>
-  <div class="container">
-    <p>AutoFix PRO © 2026 • Київ, вул. Прикладна 12 • +38 (067) 123-45-67</p>
-    <div class="footer-links">
-      <a href="#">Політика конфіденційності</a>
-      <a href="#">Договір публічної оферти</a>
-    </div>
-  </div>
+  <p>AutoFix PRO © 2026 • Київ • +38 (067) 123-45-67</p>
 </footer>
 
 <script>
-/* COUNTERS */
-function animateCounters() {
-  const counters = document.querySelectorAll('.counter-number');
-  counters.forEach(counter => {
-    const target = +counter.getAttribute('data-target');
-    const increment = target / 80;
-    let count = 0;
-    const timer = setInterval(() => {
-      count += increment;
-      if (count >= target) {
-        counter.textContent = target;
-        clearInterval(timer);
-      } else {
-        counter.textContent = Math.floor(count);
-      }
-    }, 30);
-  });
-}
-setTimeout(animateCounters, 1200);
-
-/* FAQ Toggle */
-function toggleFaq(el) {
-  el.classList.toggle('active');
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('active')
 }
 
-/* Form submit */
-document.getElementById('mainForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const popup = document.createElement('div');
-  popup.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#111827;padding:40px 60px;border-radius:20px;color:#fff;text-align:center;z-index:99999;box-shadow:0 20px 50px rgba(0,0,0,0.7);';
-  popup.innerHTML = `<h2 style="color:#22c55e;">Дякуємо!</h2><p>Заявку прийнято.<br>Ми передзвонимо протягом 5 хвилин.</p>`;
-  document.body.appendChild(popup);
-  setTimeout(() => popup.remove(), 4500);
-  this.reset();
-});
+// Форма
+document.getElementById('form').addEventListener('submit', e => {
+  e.preventDefault()
+  alert('Заявку прийнято! Скоро передзвонимо.')
+})
 
-/* Header scroll */
+// Header scroll
 window.addEventListener('scroll', () => {
-  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 80);
-});
-
-/* Smooth scroll for all anchors */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-/* Fade-in observer */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.animation = 'fadeUp 1.2s forwards';
-    }
-  });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.service-card, .review-card, .team-member').forEach(el => observer.observe(el));
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 80)
+})
 </script>
-
 </body>
 </html>
