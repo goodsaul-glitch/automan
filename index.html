@@ -1,221 +1,244 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AutoFix PRO СТО</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Montserrat',sans-serif;background:#020617;color:#fff;scroll-behavior:smooth}
-
-/* HEADER */
-header{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-.logo{font-size:22px;font-weight:700}
-nav a{margin:0 10px;color:#fff;text-decoration:none}
-.btn{
-background:linear-gradient(45deg,#ff0000,#ff7a00);
-padding:12px 20px;
-border:none;
-border-radius:10px;
-color:#fff;
-cursor:pointer;
-transition:.3s;
-}
-.btn:hover{transform:scale(1.05);}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:url('https://images.unsplash.com/photo-1493238792000-8113da705763') center/cover no-repeat;
-}
-.hero h1{font-size:52px}
-.hero p{margin:15px 0;font-size:18px}
-
-/* SECTION */
-.section{padding:100px 20px;max-width:1200px;margin:auto}
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-/* CARD */
-.card{
-background:#0f172a;
-padding:25px;
-border-radius:15px;
-transition:.3s;
-}
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(255,0,0,0.3);
-}
-
-/* REVIEWS */
-.review{
-background:#111827;
-padding:20px;
-border-radius:10px;
-}
-
-/* FAQ */
-.faq-item{
-margin-bottom:10px;
-background:#111;
-padding:15px;
-border-radius:10px;
-cursor:pointer;
-}
-
-/* FORM */
-.form{
-background:#0f172a;
-padding:30px;
-border-radius:15px;
-max-width:450px;
-margin:auto;
-}
-input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
-border-radius:8px;
-}
-
-/* FLOAT BUTTONS */
-.float{
-position:fixed;
-right:20px;
-bottom:20px;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-.float a{
-background:red;
-padding:15px;
-border-radius:50%;
-color:white;
-text-align:center;
-text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-background:#000;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoFix PRO — СТО Київ | Ремонт авто за 1 день</title>
+  <meta name="description" content="СТО AutoFix PRO у Києві — швидкий ремонт двигуна, ходової, електрики, гальм. Діагностика від 350 грн. Гарантія до 12 місяців. Запис онлайн або за телефоном.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Montserrat',sans-serif;background:#020617;color:#e2e8f0;line-height:1.6;scroll-behavior:smooth}
+    h1,h2,h3{font-weight:800}
+    a{color:#ff6b6b;text-decoration:none}
+    /* HEADER */
+    header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:16px 5%;background:rgba(15,23,42,0.85);backdrop-filter:blur(12px);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,0.4)}
+    .logo{font-size:26px;font-weight:800;color:#ff6b6b}
+    nav a{margin:0 16px;font-weight:600;transition:.2s}
+    nav a:hover{color:#ff6b6b}
+    .btn{background:linear-gradient(45deg,#ff4d4d,#ff8c00);padding:12px 28px;border:none;border-radius:12px;color:#fff;font-weight:700;cursor:pointer;transition:.3s;box-shadow:0 4px 15px rgba(255,77,77,0.4)}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(255,77,77,0.5)}
+    /* HERO */
+    .hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.65)),url('https://images.unsplash.com/photo-1617781213328-f1a0e6d3a3d0?auto=format&fit=crop&q=80') center/cover no-repeat;position:relative}
+    .hero-content{max-width:900px;padding:0 20px}
+    .hero h1{font-size:clamp(42px,8vw,64px);margin-bottom:24px;text-shadow:0 4px 12px rgba(0,0,0,0.7)}
+    .hero p{font-size:clamp(18px,4vw,24px);margin-bottom:32px;opacity:0.95}
+    /* SECTION */
+    .section{padding:120px 5%;max-width:1300px;margin:auto}
+    h2{font-size:clamp(32px,6vw,48px);text-align:center;margin-bottom:60px;color:#ff6b6b}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+    /* CARD */
+    .card{background:#0f172a;padding:32px;border-radius:16px;transition:.4s;border:1px solid #1e293b}
+    .card:hover{transform:translateY(-12px);box-shadow:0 20px 40px rgba(255,107,107,0.2);border-color:#ff6b6b}
+    .card h3{font-size:24px;margin-bottom:16px;color:#ff6b6b}
+    /* TRUST */
+    .trust{text-align:center;margin:60px 0}
+    .trust-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:40px}
+    .trust-item{font-size:18px;padding:20px 40px;background:#111827;border-radius:12px}
+    /* REVIEWS */
+    .review{background:#111827;padding:28px;border-radius:16px;border-left:5px solid #ff6b6b}
+    .review p{margin:16px 0}
+    .stars{color:#fbbf24;font-size:20px}
+    /* FAQ */
+    .faq-item{background:#111827;padding:20px;border-radius:12px;margin-bottom:16px;cursor:pointer;transition:.3s}
+    .faq-item:hover{background:#1e293b}
+    .faq-item.active{background:#1e293b}
+    .faq-answer{display:none;padding-top:16px;color:#cbd5e1}
+    .faq-item.active .faq-answer{display:block}
+    /* FORM */
+    .form{background:#0f172a;padding:40px;border-radius:20px;max-width:500px;margin:0 auto;border:1px solid #1e293b}
+    input,button{width:100%;padding:16px;margin:12px 0;border:none;border-radius:10px;font-size:16px}
+    input{background:#1e293b;color:#fff}
+    /* FLOAT */
+    .float{position:fixed;right:24px;bottom:24px;display:flex;flex-direction:column;gap:16px;z-index:999}
+    .float a{background:#ff4d4d;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 8px 20px rgba(255,77,77,0.5);transition:.3s}
+    .float a:hover{transform:scale(1.15)}
+    /* GALLERY */
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+    /* FOOTER */
+    footer{text-align:center;padding:60px 20px;background:#000;color:#64748b}
+  </style>
 </head>
-
 <body>
 
 <header>
-<div class="logo">AutoFix PRO</div>
-<nav>
-<a href="#services">Послуги</a>
-<a href="#reviews">Відгуки</a>
-<a href="#faq">FAQ</a>
-</nav>
-<button class="btn" onclick="scrollToForm()">Записатися</button>
+  <div class="logo">AutoFix PRO</div>
+  <nav>
+    <a href="#services">Послуги</a>
+    <a href="#prices">Ціни</a>
+    <a href="#reviews">Відгуки</a>
+    <a href="#faq">Питання</a>
+  </nav>
+  <button class="btn" onclick="scrollToForm()">Записатися за 30 сек</button>
 </header>
 
 <section class="hero">
-<h1>Ремонт авто за 1 день</h1>
-<p>СТО №1 у вашому місті</p>
-<button class="btn" onclick="scrollToForm()">Отримати консультацію</button>
+  <div class="hero-content">
+    <h1>Ремонт авто за 1 день у Києві</h1>
+    <p>Діагностика — від 350 грн<br>Гальма, сходження, АКПП, електрика — швидко та з гарантією до 12 місяців</p>
+    <button class="btn" onclick="scrollToForm()">Отримати точну ціну за 5 хвилин</button>
+  </div>
 </section>
 
 <section class="section" id="services">
-<h2>Наші послуги</h2>
-<div class="grid">
-<div class="card">🔧 Діагностика</div>
-<div class="card">🛠 Ремонт двигуна</div>
-<div class="card">🚗 Ходова</div>
-<div class="card">⚡ Електрика</div>
+  <h2>Що ми робимо швидко та якісно</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Комп'ютерна діагностика</h3>
+      <p>Всі марки, оригінальне ПЗ. Виявляємо помилки за 30–60 хв.</p>
+    </div>
+    <div class="card">
+      <h3>Ремонт двигуна</h3>
+      <p>Заміна ГРМ, прокладок, ремонт ГБЦ — часто за 1 день.</p>
+    </div>
+    <div class="card">
+      <h3>Ходова частина</h3>
+      <p>Заміна кульових, сайлентблоків, амортизаторів, розвал-сходження.</p>
+    </div>
+    <div class="card">
+      <h3>Гальмівна система</h3>
+      <p>Колдки + диски за 2–4 години. Без черг.</p>
+    </div>
+    <div class="card">
+      <h3>Електрика та електроніка</h3>
+      <p>Стартер, генератор, датчики, склопідйомники, мультимедіа.</p>
+    </div>
+    <div class="card">
+      <h3>АКПП / МКПП</h3>
+      <p>Ремонт, заміна оливи, адаптація — від 1 дня.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="prices">
+  <h2>Орієнтовні ціни 2026 (Київ)</h2>
+  <div class="grid">
+    <div class="card"><strong>Діагностика</strong> — від 350 грн</div>
+    <div class="card"><strong>Розвал-сходження 3D</strong> — 650–850 грн</div>
+    <div class="card"><strong>Заміна гальмівних колодок (вісь)</strong> — від 800 грн + запчастини</div>
+    <div class="card"><strong>Заміна ГРМ (16 клапани)</strong> — від 4500 грн</div>
+    <div class="card"><strong>Ремонт ходової (1 сторона)</strong> — від 1200 грн</div>
+    <div class="card"><strong>Заміна оливи + фільтрів</strong> — від 900 грн</div>
+  </div>
+  <p style="text-align:center;margin-top:40px;font-size:18px">Точну ціну скажемо після діагностики — без прихованих доплат!</p>
+</section>
+
+<div class="trust">
+  <div class="trust-grid">
+    <div class="trust-item">Працюємо з 2018 року</div>
+    <div class="trust-item">Гарантія від 3 до 12 місяців</div>
+    <div class="trust-item">Понад 3200 авто відремонтовано</div>
+    <div class="trust-item">Без вихідних 9:00–21:00</div>
+  </div>
 </div>
+
+<section class="section">
+  <h2>Наша майстерня</h2>
+  <div class="grid gallery">
+    <!-- Заміни на реальні фото СТО -->
+    <img src="https://images.unsplash.com/photo-1617781213328-f1a0e6d3a3d0?auto=format&fit=crop&q=80" alt="СТО бокс">
+    <img src="https://images.unsplash.com/photo-1486261713130-07b82a6c046a?auto=format&fit=crop&q=80" alt="Майстер на підйомнику">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80" alt="Ремонт двигуна">
+    <img src="https://images.unsplash.com/photo-1618843479313-40f2e308a518?auto=format&fit=crop&q=80" alt="Чистий бокс">
+  </div>
 </section>
 
 <section class="section" id="reviews">
-<h2>Відгуки</h2>
-<div class="grid">
-<div class="review">🔥 Дуже швидко полагодили авто!</div>
-<div class="review">🔥 Чесні ціни і норм майстри</div>
-<div class="review">🔥 Рекомендую 100%</div>
-</div>
+  <h2>Що кажуть наші клієнти</h2>
+  <div class="grid">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>«Гальма за 3 години! Приїхав на скрип, поїхав тихо. Ціна реальна, без розводу. Дякую!»</p>
+      <strong>Олег, BMW X5, 12.03.2026</strong>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>«Замінили ГРМ на Skoda Octavia за 1 день. Діагностика виявила ще кілька дрібниць — все поправили. Рекомендую!»</p>
+      <strong>Аліна, 08.02.2026</strong>
+    </div>
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <p>«Дуже швидко зробили ходову. Чесно сказали, що можна їздити ще 10 тис без ремонту — не нав'язували зайве.»</p>
+      <strong>Сергій, Toyota RAV4, 01.03.2026</strong>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="faq">
-<h2>Питання</h2>
-<div class="faq-item" onclick="toggle(this)">Скільки коштує діагностика?</div>
-<div class="faq-item" onclick="toggle(this)">Чи даєте гарантію?</div>
+  <h2>Часті питання</h2>
+  <div class="faq-item" onclick="toggle(this)">
+    Скільки коштує діагностика?
+    <div class="faq-answer">Комп'ютерна діагностика — від 350 грн (зчитування + розшифровка + рекомендації).</div>
+  </div>
+  <div class="faq-item" onclick="toggle(this)">
+    Чи даєте гарантію на роботи?
+    <div class="faq-answer">Так, від 3 до 12 місяців залежно від типу ремонту. На запчастини — гарантія виробника.</div>
+  </div>
+  <div class="faq-item" onclick="toggle(this)">
+    Чи працюєте у вихідні?
+    <div class="faq-answer">Так, без вихідних з 9:00 до 21:00. Запис обов'язковий у суботу-неділю.</div>
+  </div>
+  <div class="faq-item" onclick="toggle(this)">
+    Чи є евакуатор?
+    <div class="faq-answer">Так, власний евакуатор — виїзд по Києву від 500 грн (залежить від району).</div>
+  </div>
+  <div class="faq-item" onclick="toggle(this)">
+    Які марки берете?
+    <div class="faq-answer">Всі популярні: VW, Skoda, Toyota, BMW, Mercedes, Renault, Hyundai, Kia, Ford тощо.</div>
+  </div>
 </section>
 
 <section class="section">
-<h2>Залиш заявку</h2>
-<div class="form" id="form">
-<input id="name" placeholder="Ім'я">
-<input id="phone" placeholder="Телефон">
-<button class="btn" onclick="send()">Відправити</button>
-</div>
-</section>
-
-<section class="section">
-<iframe src="https://maps.google.com/maps?q=kyiv&t=&z=13&output=embed" width="100%" height="300"></iframe>
+  <h2>Залиште заявку — передзвонимо за 3–5 хвилин</h2>
+  <div class="form" id="form">
+    <input id="name" placeholder="Ваше ім'я" required>
+    <input id="phone" placeholder="Телефон (наприклад +380...)" required>
+    <input id="car" placeholder="Марка та модель авто (не обов'язково)">
+    <button class="btn" onclick="send()">Отримати консультацію</button>
+    <p style="font-size:14px;text-align:center;margin-top:20px;color:#94a3b8">Натискаючи кнопку, ви погоджуєтесь з політикою конфіденційності</p>
+  </div>
 </section>
 
 <div class="float">
-<a href="tel:+380000000000">📞</a>
-<a href="#">💬</a>
+  <a href="tel:+380671234567">📞</a>
+  <a href="https://t.me/AutoFixPRO_bot">💬</a>
 </div>
 
 <footer>
-<p>AutoFix PRO © 2026</p>
+  <p>AutoFix PRO © 2026 • СТО Київ • вул. Прикладна 12 • +38 (067) 123-45-67</p>
 </footer>
 
 <script>
-function scrollToForm(){
-document.getElementById('form').scrollIntoView({behavior:'smooth'});
-}
+function scrollToForm(){document.getElementById('form').scrollIntoView({behavior:'smooth'})}
 
 function toggle(el){
-el.classList.toggle("active");
+  el.classList.toggle('active')
 }
-
-const TOKEN="YOUR_TOKEN";
-const CHAT_ID="YOUR_ID";
 
 function send(){
-let name=document.getElementById('name').value;
-let phone=document.getElementById('phone').value;
-
-if(!name||!phone){alert("Заповни поля");return;}
-
-fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=Заявка:%0A${name}%0A${phone}`)
-.then(()=>alert("Відправлено"));
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const car = document.getElementById('car').value.trim();
+  
+  if(!name || !phone){
+    alert("Заповніть ім'я та телефон");
+    return;
+  }
+  
+  const text = `Нова заявка!\nІм'я: ${name}\nТелефон: ${phone}\nАвто: ${car || 'не вказано'}`;
+  
+  // Заміни на реальний токен та chat_id (краще через бекенд!)
+  const TOKEN = "YOUR_BOT_TOKEN_HERE";
+  const CHAT_ID = "YOUR_CHAT_ID_HERE";
+  
+  fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}`)
+    .then(r => r.json())
+    .then(data => {
+      if(data.ok) alert("Заявку відправлено! Скоро передзвонимо.");
+      else alert("Щось пішло не так, спробуйте ще раз або подзвоніть нам.");
+    })
+    .catch(() => alert("Помилка зв'язку. Подзвоніть +38 (067) 123-45-67"));
 }
 </script>
-
 </body>
 </html>
