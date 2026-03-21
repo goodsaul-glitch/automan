@@ -1,221 +1,154 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AutoFix PRO СТО</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Montserrat',sans-serif;background:#020617;color:#fff;scroll-behavior:smooth}
-
-/* HEADER */
-header{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-.logo{font-size:22px;font-weight:700}
-nav a{margin:0 10px;color:#fff;text-decoration:none}
-.btn{
-background:linear-gradient(45deg,#ff0000,#ff7a00);
-padding:12px 20px;
-border:none;
-border-radius:10px;
-color:#fff;
-cursor:pointer;
-transition:.3s;
-}
-.btn:hover{transform:scale(1.05);}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:url('https://images.unsplash.com/photo-1493238792000-8113da705763') center/cover no-repeat;
-}
-.hero h1{font-size:52px}
-.hero p{margin:15px 0;font-size:18px}
-
-/* SECTION */
-.section{padding:100px 20px;max-width:1200px;margin:auto}
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-/* CARD */
-.card{
-background:#0f172a;
-padding:25px;
-border-radius:15px;
-transition:.3s;
-}
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(255,0,0,0.3);
-}
-
-/* REVIEWS */
-.review{
-background:#111827;
-padding:20px;
-border-radius:10px;
-}
-
-/* FAQ */
-.faq-item{
-margin-bottom:10px;
-background:#111;
-padding:15px;
-border-radius:10px;
-cursor:pointer;
-}
-
-/* FORM */
-.form{
-background:#0f172a;
-padding:30px;
-border-radius:15px;
-max-width:450px;
-margin:auto;
-}
-input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
-border-radius:8px;
-}
-
-/* FLOAT BUTTONS */
-.float{
-position:fixed;
-right:20px;
-bottom:20px;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-.float a{
-background:red;
-padding:15px;
-border-radius:50%;
-color:white;
-text-align:center;
-text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-background:#000;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Автосервіс “Назва” – ремонт та обслуговування авто</title>
+  <meta name="description" content="Швидкий та якісний ремонт авто. Зателефонуйте нам або залиште заявку. Автомайстри з досвідом.">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <!-- Карта Google (опціонально API-ключ) -->
 </head>
-
 <body>
+  <!-- Header / Hero -->
+  <header class="sticky">
+    <div class="container">
+      <div class="logo"><img src="images/logo.png" alt="Логотип СТО"></div>
+      <div class="contact">
+        <a href="tel:+380XXXXXXXXX" class="phone">+38 (0XX) XXX-XX-XX</a>
+        <button class="btn btn-primary" onclick="window.location.href='tel:+380XXXXXXXXX';">Зателефонувати</button>
+      </div>
+    </div>
+  </header>
 
-<header>
-<div class="logo">AutoFix PRO</div>
-<nav>
-<a href="#services">Послуги</a>
-<a href="#reviews">Відгуки</a>
-<a href="#faq">FAQ</a>
-</nav>
-<button class="btn" onclick="scrollToForm()">Записатися</button>
-</header>
+  <section id="hero" style="background:url('images/hero.jpg') no-repeat center/cover;">
+    <div class="container">
+      <h1>Професійний ремонт авто <span>24/7</span></h1>
+      <p>Знижка 10% на перше ТО! Оптимальні ціни, досвідчені майстри.</p>
+      <button class="btn btn-call" onclick="window.location.href='tel:+380XXXXXXXXX';">Замовити дзвінок</button>
+    </div>
+  </section>
 
-<section class="hero">
-<h1>Ремонт авто за 1 день</h1>
-<p>СТО №1 у вашому місті</p>
-<button class="btn" onclick="scrollToForm()">Отримати консультацію</button>
-</section>
+  <section id="services">
+    <div class="container">
+      <h2>Наші послуги</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <img src="images/ico_engine.png" alt="Ремонт двигуна">
+          <h3>Ремонт двигуна</h3>
+          <p>від 2000 грн</p>
+        </div>
+        <div class="service-item">
+          <img src="images/ico_oil.png" alt="Заміна мастила">
+          <h3>Заміна мастила</h3>
+          <p>від 400 грн</p>
+        </div>
+        <!-- інші послуги -->
+      </div>
+      <button class="btn btn-secondary">Детальніше про всі послуги</button>
+    </div>
+  </section>
 
-<section class="section" id="services">
-<h2>Наші послуги</h2>
-<div class="grid">
-<div class="card">🔧 Діагностика</div>
-<div class="card">🛠 Ремонт двигуна</div>
-<div class="card">🚗 Ходова</div>
-<div class="card">⚡ Електрика</div>
-</div>
-</section>
+  <section id="process">
+    <div class="container">
+      <h2>Як ми працюємо</h2>
+      <ol class="steps">
+        <li>Ви телефонуєте або залишаєте заявку</li>
+        <li>Менеджер зв’язується та уточнює деталі</li>
+        <li>Призначаємо час та виконуємо ремонт</li>
+        <li>Повертаємо автомобіль у вказаний строк</li>
+      </ol>
+    </div>
+  </section>
 
-<section class="section" id="reviews">
-<h2>Відгуки</h2>
-<div class="grid">
-<div class="review">🔥 Дуже швидко полагодили авто!</div>
-<div class="review">🔥 Чесні ціни і норм майстри</div>
-<div class="review">🔥 Рекомендую 100%</div>
-</div>
-</section>
+  <section id="testimonials">
+    <div class="container">
+      <h2>Відгуки клієнтів</h2>
+      <div class="reviews">
+        <blockquote>
+          «Дуже задоволений сервісом та оперативністю!». <cite>– Петро, Київ</cite>
+        </blockquote>
+        <blockquote>
+          «Швидко знайшли й усунули несправність. Рекомендую!»<cite>– Олена, Львів</cite>
+        </blockquote>
+        <!-- ще відгуки -->
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="faq">
-<h2>Питання</h2>
-<div class="faq-item" onclick="toggle(this)">Скільки коштує діагностика?</div>
-<div class="faq-item" onclick="toggle(this)">Чи даєте гарантію?</div>
-</section>
+  <section id="gallery">
+    <div class="container">
+      <h2>Наші роботи</h2>
+      <div class="gallery">
+        <img src="images/before1.jpg" alt="До ремонту">
+        <img src="images/after1.jpg" alt="Після ремонту">
+        <!-- галерея перед/після -->
+      </div>
+    </div>
+  </section>
 
-<section class="section">
-<h2>Залиш заявку</h2>
-<div class="form" id="form">
-<input id="name" placeholder="Ім'я">
-<input id="phone" placeholder="Телефон">
-<button class="btn" onclick="send()">Відправити</button>
-</div>
-</section>
+  <section id="faq">
+    <div class="container">
+      <h2>Питання та відповіді</h2>
+      <dl>
+        <dt>Які гарантії?</dt>
+        <dd>Надаємо гарантію на всі види робіт від 1 року.</dd>
+        <dt>Чи можна записатися онлайн?</dt>
+        <dd>Так, залиште ваш номер, і ми вам передзвонимо.</dd>
+        <!-- інші питання -->
+      </dl>
+    </div>
+  </section>
 
-<section class="section">
-<iframe src="https://maps.google.com/maps?q=kyiv&t=&z=13&output=embed" width="100%" height="300"></iframe>
-</section>
+  <section id="contact">
+    <div class="container">
+      <h2>Контакти</h2>
+      <p><strong>Адреса:</strong> м. Київ, вул. Автомобільна, 10</p>
+      <p><strong>Телефон:</strong> <a href="tel:+380XXXXXXXXX">+38 (0XX) XXX-XX-XX</a></p>
+      <p><strong>E-mail:</strong> info@example.com</p>
+      <!-- Google Map Embed -->
+      <iframe
+        width="100%" height="300" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Київ+Автомобільна+10"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
-<div class="float">
-<a href="tel:+380000000000">📞</a>
-<a href="#">💬</a>
-</div>
+  <footer>
+    <div class="container">
+      <p>© 2026 СТО «Назва» – Всі права захищені.</p>
+    </div>
+  </footer>
 
-<footer>
-<p>AutoFix PRO © 2026</p>
-</footer>
-
-<script>
-function scrollToForm(){
-document.getElementById('form').scrollIntoView({behavior:'smooth'});
-}
-
-function toggle(el){
-el.classList.toggle("active");
-}
-
-const TOKEN="YOUR_TOKEN";
-const CHAT_ID="YOUR_ID";
-
-function send(){
-let name=document.getElementById('name').value;
-let phone=document.getElementById('phone').value;
-
-if(!name||!phone){alert("Заповни поля");return;}
-
-fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=Заявка:%0A${name}%0A${phone}`)
-.then(()=>alert("Відправлено"));
-}
-</script>
-
+  <script src="js/main.js"></script>
+  <script>
+    // Приклад: відправка даних форми в Telegram Bot
+    async function sendLead(formData) {
+      const token = 'YOUR_BOT_TOKEN';
+      const chatId = 'CHAT_ID';
+      const text = encodeURIComponent(
+        `Ім'я: ${formData.name}\nТелефон: ${formData.phone}\nКоментар: ${formData.msg}`
+      );
+      const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`;
+      try {
+        await fetch(url);
+        alert('Дякуємо! Ми зателефонуємо вам незабаром.');
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    // Обробник сабміту форми (якщо є)
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = {
+        name: this.elements['name'].value,
+        phone: this.elements['phone'].value,
+        msg: this.elements['msg'].value
+      };
+      sendLead(formData);
+    });
+  </script>
 </body>
 </html>
